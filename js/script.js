@@ -1,12 +1,17 @@
-function printMessage(msg){
-	let div = document.createElement('div');
-	div.innerHTML = msg;
-	document.getElementById('messages').appendChild(div);
+let randomNumber = Math.floor(Math.random() * 3 + 1);
+
+console.log('Wylosowana liczba to: ' + randomNumber);
+
+let computerMove = 'nieznany ruch';
+
+if(randomNumber == 1){
+	computerMove = 'kamień';
+}
+if(randomNumber == 2){
+	computerMove = 'papier';
+}
+if(randomNumber == 3){
+	computerMove = 'nozyce';
 }
 
-function clearMessages(){
-	document.getElementById('messages').innerHTML = '';
-}
-let playerMove= 'papier';
-
-printMessage('Zagrałem ' + playerMove + '! Jeśli Twój ruch to papier, to remis');
+printMessage('Moj ruch to: ' + computerMove);
